@@ -1,17 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "./BatteryTools.module.css";
 
 function Result() {
+  const [dataList, setDataList] = useState([]);
+
+  useEffect(() => {
+    getFilterData();
+  }, []);
+
+  const getFilterData = async (e) => {
+    const bodyFormData = new FormData();
+    setLoadingUpload(true);
+    var objectData = {
+      outdoor: "Y",
+      family: "Li Primary",
+    };
+    try {
+      const { data } = await Axios.post("/api/bateries/filter", objectData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log("Response : ", data);
+
+      setLoadingUpload(false);
+    } catch (error) {
+      setErrorUpload(error.message);
+      setLoadingUpload(false);
+    }
+  };
+
   return (
     <div className="mybox">
-      <h2 className={Styles.sectionTitle}>Battery selection guide</h2>{" "}
-      <h6 className={Styles.sectionTitle}>Our suggestion</h6>
+      <h2 className={Styles.sectionTitle}>Battery selection guide</h2> <h6 className={Styles.sectionTitle}>Our suggestion</h6>
       <div className="container-infor">
         <div className="res-info">
           <p>
-            Down below are different suggestion reflecting the selection you
-            have made. If you are unsure of any of the details, don't hesitate
-            to contact us
+            Down below are different suggestion reflecting the selection you have made. If you are unsure of any of the details, don't hesitate to
+            contact us
           </p>
         </div>
         <div>
