@@ -31,11 +31,7 @@ function BatteryEditScreen() {
   const { loading, error, battery } = batteryDetails;
 
   const batteryUpdate = useSelector((state) => state.batteryUpdate);
-  const {
-    loading: loadingUpdate,
-    error: errorUpdate,
-    success: successUpdate,
-  } = batteryUpdate;
+  const { loading: loadingUpdate, error: errorUpdate, success: successUpdate } = batteryUpdate;
 
   const dispatch = useDispatch();
 
@@ -139,17 +135,9 @@ function BatteryEditScreen() {
             </div>
             <div>
               <label htmlFor="imageFile">Image File</label>
-              <input
-                className="input-one"
-                type="file"
-                id="imageFile"
-                label="Choose Image"
-                onChange={uploadFileHandler}
-              ></input>
+              <input className="input-one" type="file" id="imageFile" label="Choose Image" onChange={uploadFileHandler}></input>
               {loadingUpload && <LoadingBox></LoadingBox>}
-              {errorUpload && (
-                <MessageBox variant="danger">{errorUpload}</MessageBox>
-              )}
+              {errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
             </div>
             <div>
               <label htmlFor="type">Type</label>
