@@ -121,6 +121,7 @@ batteryRouter.post(
     Battery.find(
       {
         outdoor: req.body.outdoor,
+        family: req.body.family,
       },
       function (err, data) {
         if (err) {

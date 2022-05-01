@@ -60,7 +60,7 @@ function Result() {
           <button className="big-button-enq">Send enquiry &#9993;</button>
         </div>
       </div>
-      <div className="container-info">
+      {/* <div className="container-info">
         <div>
           <img className="imgresult" src="images/battery.jpeg" alt="imgtwo" />
         </div>
@@ -139,7 +139,7 @@ function Result() {
           </div>
           <button className="big-button-enq">Send enquiry &#9993;</button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
