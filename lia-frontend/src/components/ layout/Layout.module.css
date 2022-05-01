@@ -1,0 +1,39 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* .orangeBar {
+  background-color: #f57d00;
+  min-height: 3rem;
+} */
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff7f;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+main {
+  flex-grow: 1;
+  background-color: #f0f0f0;
+  padding: 1.6rem;
+  min-height: 100vh;
+  height: 100%;
+}
+
+@media (min-width: 30rem) and (max-width: 50rem) {
+  main {
+    padding: 1.6rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  main {
+    padding: 2rem 10rem;
+  }
+}

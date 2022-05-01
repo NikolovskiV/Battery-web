@@ -1,0 +1,51 @@
+.card {
+  background-color: #f0f0f0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.625rem;
+  color: white;
+  height: 8.5rem;
+  width: 100%;
+  /* align-self: flex-end; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cardFilter {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.625rem;
+  background-color: #2323231e;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cardTitle {
+  flex: 1;
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (min-width: 30rem) and (max-width: 50rem) {
+  .card {
+    height: 10rem;
+    /* width: 12rem; */
+  }
+}
+
+@media (min-width: 50rem) {
+  .card {
+    height: 9rem;
+    /* width: 12rem; */
+  }
+}

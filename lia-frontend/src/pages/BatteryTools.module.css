@@ -1,0 +1,70 @@
+/* .stepper {
+  margin-top: 1rem;
+  background-color: white;
+  height: 7rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.section {
+  margin-top: 1rem;
+  width: 80%;
+  display: grid;
+  margin-left: 10%;
+  grid-template-columns: repeat(2, calc(((100% - 0.5rem) / 2)));
+  grid-gap: 0.5rem;
+}
+
+.sectionTitle {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.resultSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.resultTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 320px;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+/* 
+table.tableSelection,
+tr,
+td {
+  width: 80%;
+  background-color: white;
+} */
+
+.resultPage {
+  display: flex;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+@media (min-width: 30rem) and (max-width: 50rem) {
+  .section {
+    grid-template-columns: repeat(3, calc(((100% - 1rem) / 3)));
+  }
+}
+@media (min-width: 50rem) {
+  .section {
+    /* grid-template-columns: repeat(4, calc(((100% - 1.5rem) / 4))); */
+    grid-template-columns: repeat(2, calc(((100% - 1rem) / 2)));
+  }
+}
