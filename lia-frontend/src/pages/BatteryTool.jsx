@@ -175,19 +175,58 @@ export default function BatteryTool() {
       )}
 
       {progress === "6" && (
-        <div className="restab">
+        <>
           <h2 className={Styles.sectionTitle}>Review your selections</h2>
-          <div className={Styles.resultPage}>
-            <div>
-              <img
-                className="imgres"
-                src="images/reviewselectionimg573x109px.jpeg"
-                alt="newimg"
-              />
-            </div>
+          <div className="restab">
+            <div className={Styles.resultPage}>
+              <div>
+                <img
+                  className="imgres"
+                  src="images/reviewselectionimg573x109px.jpeg"
+                  alt="newimg"
+                />
+              </div>
 
-            <div className={Styles.resultTable}>
-              <table className={Styles.tableSelection}>
+              <div className={Styles.resultTable}>
+                <div className="divtab">
+                  <ul>
+                    <div className="links">
+                      <li>
+                        <b>Market area</b>
+                      </li>
+                      <li>{market.name}</li>
+                    </div>
+                    <div className="links">
+                      <li>
+                        <b>Application</b>
+                      </li>
+                      <li>{application.name}</li>
+                    </div>
+                    <div className="links">
+                      <li>
+                        <b>Conditions</b>
+                      </li>
+                      <li>{items.name}</li>
+                    </div>
+                    <div className="links">
+                      <li>
+                        <b>Service life</b>
+                      </li>
+                      <li>{serviceLife} years</li>
+                    </div>
+                    <div className="links-one">
+                      <div>
+                        <li>
+                          <b>Power consumption</b>
+                        </li>
+                      </div>
+                      <div className="linksone">
+                        <li>{current} A</li>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+                {/* <table className={Styles.tableSelection}>
                 <tbody className="table1">
                   <tr>
                     <td>
@@ -217,31 +256,32 @@ export default function BatteryTool() {
                     <td>
                       <b>Power consumption</b>
                     </td>
-                    <td>{serviceLife} A</td>
+                    <td>{current} years</td>
                   </tr>
                 </tbody>
-              </table>
-            </div>
+              </table> */}
+              </div>
 
-            <div className={Styles.resultButton}>
-              <button
-                className="big-button"
-                onClick={() => {
-                  navigate("/result");
-                  sendResult();
-                }}
-              >
-                Get my results <br />
-                &rarr;
-              </button>
+              <div className={Styles.resultButton}>
+                <button
+                  className="big-button"
+                  onClick={() => {
+                    navigate("/result");
+                    sendResult();
+                  }}
+                >
+                  Get my results <br />
+                  &rarr;
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
 
       {progress === "7" && (
         <>
-          <Result onSelected={resultSelectionHandler} />
+          <Result value={results} onSelected={resultSelectionHandler} />
         </>
       )}
 

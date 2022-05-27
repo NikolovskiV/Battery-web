@@ -71,3 +71,18 @@
     display: none;
   }
 }
+@media (max-width: 75rem) {
+  .mainHeader_menu {
+    display: none;
+  }
+}
+
+@media (max-width: 75rem) {
+  .mainHeader {
+    display: flex;
+    justify-content: center;
+  }
+  .mainHeader_imgContainer {
+    margin-left: 0;
+  }
+}

@@ -6,7 +6,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { BATTERY_DELETE_RESET } from "../constants/batteryConstants";
 
-function BatteryScreen(props) {
+function BatteryScreen() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const batteryId = id;     // props.match.params.id;

@@ -10,7 +10,11 @@ function Stepper(props) {
         `}
       >
         <div className="step-counter">{props.progress === "1" ? "1" : "✔"}</div>
-        <div className="stepmark">Market</div>
+        <div
+          className={`stepmark  ${props.progress === "Market" ? "active" : ""}`}
+        >
+          Market
+        </div>
       </div>
       <div
         className={`stepper-item 

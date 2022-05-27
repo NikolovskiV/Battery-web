@@ -34,9 +34,7 @@
 
 .resultTable {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   width: 60%;
   height: 320px;
   background-color: white;
@@ -54,7 +52,7 @@ td {
 .resultPage {
   display: flex;
   margin-top: 1rem;
-  gap: 2rem;
+  gap: 6rem;
 }
 
 @media (min-width: 30rem) and (max-width: 50rem) {
@@ -66,5 +64,21 @@ td {
   .section {
     /* grid-template-columns: repeat(4, calc(((100% - 1.5rem) / 4))); */
     grid-template-columns: repeat(2, calc(((100% - 1rem) / 2)));
+  }
+}
+
+@media (max-width: 75rem) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 18rem;
   }
 }

@@ -57,7 +57,7 @@ export const deleteBattery = (batteryId) => async (dispatch) => {
     dispatch({ type: BATTERY_DELETE_REQUEST, payload: batteryId });
     try {
         const { data } = await Axios.delete(`/api/bateries/${batteryId}`, {});
-        dispatch({ type: BATTERY_DELETE_SUCCESS })
+        dispatch({ type: BATTERY_DELETE_SUCCESS, payload: data })
     } catch (error) {
         const message = error.response && error.response.data.message ? error.response.data.message : error.message;
         dispatch({ type: BATTERY_DELETE_FAIL, payload: message });

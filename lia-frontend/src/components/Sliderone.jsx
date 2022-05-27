@@ -66,36 +66,51 @@ function Sliderone(props) {
   });
 
   return (
-    <div className="stepper-one">
-      <form onSubmit={submitHandler}>
-        <div className="range">
-          <input
-            onChange={onChangeHandler}
-            type="range"
-            min={props.min}
-            step={props.step}
-            max={props.max}
-            value={currentValue}
-            ref={currentSliderRef}
-          />
-        </div>
-        <ul className="range-labels">
-          <li className="active selected">1A</li>
-          <li>2A</li>
-          <li>3A</li>
-          <li>4A</li>
-          <li>5A</li>
-          <li>6A</li>
-          <li>7A</li>
-          <li>8A</li>
-          <li>9A</li>
-          <li>10A</li>
-        </ul>
-        <button className="big-button-two" type="submit">
-          Next&rarr;
-        </button>
-      </form>
-    </div>
+    <>
+      <div className="stepper-one">
+        <form onSubmit={submitHandler}>
+          <div className="range">
+            <input
+              onChange={onChangeHandler}
+              type="range"
+              min={props.min}
+              step={props.step}
+              max={props.max}
+              value={currentValue}
+              ref={currentSliderRef}
+            />
+          </div>
+          <ul className="range-labels">
+            <li className="active selected">1A</li>
+            <li>2A</li>
+            <li>3A</li>
+            <li>4A</li>
+            <li>5A</li>
+            <li>6A</li>
+            <li>7A</li>
+            <li>8A</li>
+            <li>9A</li>
+            <li>10A</li>
+          </ul>
+          <button className="big-button-two" type="submit">
+            Next&rarr;
+          </button>
+          <div className="checkbox">
+            <div className="checkbox-one">
+              <div className="input-five">
+                <input id="c1" type="checkbox" />
+                <label id="c2" for="c1">
+                  I am unsure of the required power consumption
+                </label>
+              </div>
+              <div>
+                <p>Explanation: How much power will your device require</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 

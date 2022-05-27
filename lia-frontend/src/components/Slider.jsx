@@ -66,36 +66,55 @@ function Slider(props) {
   });
 
   return (
-    <div className="stepper-one">
-      <form onSubmit={submitHandler}>
-        <div className="range">
-          <input
-            onChange={onChangeHandler}
-            type="range"
-            min={props.min}
-            step={props.step}
-            max={props.max}
-            value={currentValue}
-            ref={currentSliderRef}
-          />
-        </div>
-        <ul className="range-labels">
-          <li className="active selected">1 year</li>
-          <li>2 years</li>
-          <li>3 years</li>
-          <li>4 years</li>
-          <li>5 years</li>
-          <li>6 years</li>
-          <li>7 years</li>
-          <li>8 years</li>
-          <li>9 years</li>
-          <li>10 years</li>
-        </ul>
-        <button className="big-button-two" type="submit">
-          Next&rarr;
-        </button>
-      </form>
-    </div>
+    <>
+      <div className="stepper-one">
+        <form onSubmit={submitHandler}>
+          <div className="range">
+            <input
+              onChange={onChangeHandler}
+              type="range"
+              min={props.min}
+              step={props.step}
+              max={props.max}
+              value={currentValue}
+              ref={currentSliderRef}
+            />
+          </div>
+          <ul className="range-labels">
+            <li className="active selected">1 year</li>
+            <li>2 years</li>
+            <li>3 years</li>
+            <li>4 years</li>
+            <li>5 years</li>
+            <li>6 years</li>
+            <li>7 years</li>
+            <li>8 years</li>
+            <li>9 years</li>
+            <li>10 years</li>
+          </ul>
+          <button className="big-button-two" type="submit">
+            Next&rarr;
+          </button>
+          {/* Check Box */}
+          <div className="checkbox">
+            <div className="checkbox-one">
+              <div className="input-five">
+                <input id="c1" type="checkbox" />
+                <label id="c2" htmlFor="c1">
+                  I want to select a wide service life span
+                </label>
+              </div>
+              <div className="explanation">
+                <p>
+                  Explanation: How long should you device live before it needs a
+                  new power source
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 
