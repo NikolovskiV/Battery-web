@@ -133,11 +133,6 @@ batteryRouter.post(
           message: " success.",
           data: data,
         });
-        // if (battery) {
-        //   res.send(battery);
-        // } else {
-        //   res.status(404).send({ message: "Battery Not Found" });
-        // }
       }
     );
   })
